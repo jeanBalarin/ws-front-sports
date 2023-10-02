@@ -1,0 +1,19 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.po-table{
+  margin-top: 20px;
+  max-height: 75%;
+  overflow-y: auto;
+}
+
+.button po-button{
+  float: inline-end;
+}
+
+.button-center{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+

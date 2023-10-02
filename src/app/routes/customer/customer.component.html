@@ -1,0 +1,23 @@
+<div class="button">
+  <po-button  p-icon="po-icon po-icon-search" p-label="Buscar" (p-click)="onBuscaClientes()">
+  </po-button>
+</div>
+<div class="po-table">
+  <po-table
+    p-container="container"
+    [p-loading-show-more]="isLoading"
+    [p-hide-table-search]="false"
+    [p-show-more-disabled]="showMoreDisabled"
+    [p-sort]="true"
+    [p-items]="customers"
+    [p-columns]="columns"
+    *ngIf="customers && customers.length > 0" >
+    <ng-template p-table-column-template [p-property]="'component.type'" let-value>
+      <div class="badge {{ value }}">{{ value | uppercase }}</div>
+    </ng-template>
+  </po-table>
+  <div class="button-center" *ngIf="showLoadMoreButton" >
+    <po-button  p-icon="po-icon po-icon-plus" p-label="Carregar Mais..." (p-click)="onBuscaMaisClientes()"></po-button>
+  </div>
+</div>
+
